@@ -11,10 +11,16 @@ $(document).ready(function() {
     }
 
     // Set up color change effect
-    $(".pixel").mouseenter(function() {
-        $(this).addClass("dark_pixel");
-    });
+    // $(".pixel").mouseenter(function() {
+    //     $(this).addClass("dark_pixel");
+    // });
 
+    // Random color on mouseenter
+    $(".pixel").mouseenter(function() {
+        var randomColor = (Math.random()*0xFFFFFF<<0).toString(16);
+        console.log(randomColor);
+        $(this).css("background-color", "#" + randomColor);
+    });
 });
 
 function resetGrid() {
@@ -33,8 +39,14 @@ function resetGrid() {
     var pixels_per_unit = calculatePixels(len);
     $(".pixel").css({"height": pixels_per_unit, "width": pixels_per_unit});
 
+    // $(".pixel").mouseenter(function() {
+    //     $(this).addClass("dark_pixel");
+    // });
+
     $(".pixel").mouseenter(function() {
-        $(this).addClass("dark_pixel");
+        var randomColor = (Math.random()*0xFFFFFF<<0).toString(16);
+        console.log(randomColor);
+        $(this).css("background-color", "#" + randomColor);
     });
 }
 
