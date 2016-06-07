@@ -1,14 +1,23 @@
 #container {
     margin: auto;
-    background-color: #F0F0F0;
-    height: 865px;
-    width: 865px;
+    height: 864px;
+    width: 864px;
+    border-color: #666;
+    border-style: solid;
 }
 
 .pixel {
-    background-color: #666;
+    background-color: #F0F0F0;
     height: 50px;
     width: 50px;
     margin: 2px;
     float: left;
+}
+
+.dark_pixel {
+    background-color: black;
+}
+
+#reset {
+    margin: 0 auto;
 }
